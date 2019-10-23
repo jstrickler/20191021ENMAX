@@ -28,8 +28,10 @@ more_caps = {
 }
 print()
 capitals.update(more_caps)
+
 for province, capital in capitals.items():
     print(province, capital)
+
 print()
 print(capitals)
 print('-' * 60)
