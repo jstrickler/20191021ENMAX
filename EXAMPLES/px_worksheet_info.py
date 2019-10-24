@@ -13,6 +13,7 @@ def main():
     print(ws.max_row)
 
     # returns value for specified cell
+    #  ws["A3"].value
     print(ws.cell(row=2, column=3).value, ws.cell(row=2, column=2).value, '\n')
 
 if __name__ == '__main__':

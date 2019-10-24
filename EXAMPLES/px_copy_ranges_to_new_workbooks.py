@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 Copy a range from an existing spreadsheet
-to a new sheet
+to a new workbook
 """
 import openpyxl as px
 
@@ -34,9 +34,8 @@ def save_ranges_to_new_workbooks(old_ws):
 
         range_start = "{}1".format(column_letter)
         range_end = "{}{}".format(column_letter, old_ws.max_row)
-        range = "{}:{}".format(range_start, range_end)
 
-        for row in old_ws[range]:
+        for row in old_ws[range_start:range_end]:
             for col in row:
                 new_ws[col.coordinate] = col.value
 

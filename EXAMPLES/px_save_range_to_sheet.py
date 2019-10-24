@@ -11,19 +11,22 @@ def main():
     """program entry point"""
     wb = px.load_workbook(WB)
     ws = wb['US Presidents']
-    ws2 = wb.create_sheet('President Names')
-    save_range_to_new_worksheet(ws, ws2)
-    wb.close()
+    save_range_to_new_worksheet(wb, ws, 'President Names', 'B2','C46')
+#    wb.close()  ???
+    wb.save("presidents5.xlsx")
 
 # save as:
 #   wb.save("presidents4.xlsx")
 
-def save_range_to_new_worksheet(ws, ws2):
+def save_range_to_new_worksheet(wb, old_ws, sheet_title, range_start, range_end):
     """Print first and last names of all presidents"""
 
-    for row in ws['B2':'C46']:
+    new_ws = wb.create_sheet(sheet_title)
+
+    for row in old_ws[range_start:range_end]:
         for col in row:
-            ws2[col.coordinate] = col.value
+            # new_ws.cell(row=x, column=y).value = col.value
+            new_ws[col.coordinate] = col.value
 
 if __name__ == '__main__':
     main()
