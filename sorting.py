@@ -81,8 +81,25 @@ airports = {
     'SJC': 'San Jose',
     'MCO': 'Orlando',
     'ABQ': 'Albuquerque',
+    'YOW': 'Ottawa',
     'OAK': 'Oakland',
     'SMF': 'Sacramento',
     'IAD': 'Dulles',
+    'YYZ': 'Toronto',
+    'YYR': 'Regina',
+    'YEG': 'Edmonton',
+    'YVR': 'Vancouver',
 }
+
+for abbr, name in sorted(airports.items()):
+    print(abbr, name)
+print()
+
+def by_value(item):
+    return item[1], item[0]
+
+for abbr, name in sorted(airports.items(), key=by_value):
+    print(abbr, name)
+print()
+
 
