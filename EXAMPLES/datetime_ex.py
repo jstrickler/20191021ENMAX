@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+#  dateutil
 
 from datetime import datetime, date, timedelta
 
 print("date.today():", date.today())  # <1>
+print("date.day:", date.today().day)
 
 now = datetime.now()  # <2>
 print("now.day:", now.day)  # <3>
