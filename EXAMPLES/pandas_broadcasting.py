@@ -16,7 +16,7 @@ values = [  # <3>
     [150, 610, 320, 690, 640],
 ]
 
-df = pd.DataFrame(values, index, cols)  # <4>
+df = pd.DataFrame(values, index=index, columns=cols)  # <4>
 print_header("Basic DataFrame:")
 print(df)
 print()
