@@ -180,7 +180,7 @@ pycosat==0.6.3
 pycparser==2.19
 pycrypto==2.6.1
 pycurl==7.43.0.2
-pydantic==0.32.2
+pydantic==1.6.2
 pyflakes==2.0.0
 PyGithub==1.43.7
 Pygments==2.4.2
